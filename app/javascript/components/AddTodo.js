@@ -83,7 +83,6 @@ function AddTodo(props) {
     })
   };
 
-
   return (
     <>
       <h1>New Todo</h1>

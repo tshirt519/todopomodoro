@@ -8,7 +8,7 @@ import Pomodoro from './Pomodoro'
 import './App.css'
 
 const Nabvar = styled.nav`
-  background: #dbfffe;
+  background: #aaaaaa;
   min-height: 8vh;
   display: flex;
   justify-content: space-around;
