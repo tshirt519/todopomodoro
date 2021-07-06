@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 root to: redirect('/todos')
 
 get 'todos', to: 'site#index'
-get 'todos/new', to: 'site#index'
 get 'todos/:id/edit', to: 'site#index'
 get 'todos/pomodoro', to: 'site#index'
 

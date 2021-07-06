@@ -1,7 +1,6 @@
 import React from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
 import styled from 'styled-components'
-import AddTodo from './AddTodo'
 import TodoList from './TodoList'
 import EditTodo from './EditTodo'
 import Pomodoro from './Pomodoro'
@@ -11,8 +10,9 @@ const Nabvar = styled.nav`
   background: #aaaaaa;
   min-height: 8vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 `
 
 const Logo = styled.div`
@@ -22,10 +22,10 @@ const Logo = styled.div`
 
 const NavItems = styled.ul`
   display: flex;
-  width: 400px;
-  max-width: 40%;
+  max-width: 25%;
   justify-content: space-around;
   list-style: none;
+  padding: 0 20px;
 `
 
 const NavItem = styled.li`
@@ -38,7 +38,7 @@ const NavItem = styled.li`
 `
 
 const Wrapper = styled.div`
-  width: 700px;
+  width: 800px;
   max-width: 85%;
   margin: 20px auto;
 `
@@ -49,15 +49,10 @@ function App() {
       <Nabvar>
         <Logo>
           <Link to="/todos">
-            Todopomodoro
+            Todo
           </Link>
         </Logo>
         <NavItems>
-          <NavItem>
-            <Link to="/todos/new">
-              Add
-            </Link>
-          </NavItem>
           <NavItem>
             <Link to="/todos/pomodoro">
               Pomodoro
@@ -68,7 +63,6 @@ function App() {
       <Wrapper>
         <Switch>
           <Route exact path="/todos" component={TodoList} />
-          <Route exact path="/todos/new" component={AddTodo} />
           <Route path="/todos/:id/edit" component={EditTodo} />
           <Route path="/todos/pomodoro" component={Pomodoro} />
         </Switch>
